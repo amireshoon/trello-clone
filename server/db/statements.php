@@ -3,6 +3,12 @@
 
 class DB {
 
+    /**
+     * Create tables if not exists
+     * 
+     * @return void
+     * @since 1.0
+     */
     public static function createTables() {
         $pdo = Connection::getPdo();
         
@@ -16,6 +22,14 @@ class DB {
 
     }
 
+    /**
+     * Login a user
+     * 
+     * @param string $email
+     * @param string $password
+     * @return array|bool
+     * @since 1.0
+     */
     public static function login($email, $password) {
         
         if ( !self::is_user_exists( $email ) ) {
@@ -41,6 +55,15 @@ class DB {
         return false;
     }
 
+    /**
+     * Signup a user
+     * 
+     * @param string $email
+     * @param string $password
+     * @param string $fullname
+     * @return array|bool
+     * @since 1.0
+     */
     public static function signup($email, $password, $fullname) {
 
         if ( self::is_user_exists( $email ) ) {
@@ -71,6 +94,12 @@ class DB {
         return false;
     }
 
+    /**
+     * Check see is user exists or not
+     * 
+     * @param string $email
+     * @return bool
+     */
     public static function is_user_exists( $email ) {
         $query = "SELECT * FROM users WHERE user_email = :email";
         $params = [

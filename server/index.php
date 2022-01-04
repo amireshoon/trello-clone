@@ -19,7 +19,7 @@ switch ($action) {
             !isset( $_POST['email'] ) ||
             !isset( $_POST['password'] )
         ) {
-            # code...
+            // bad request
             response(
                 [
                     'status' => 'error',
@@ -43,6 +43,7 @@ switch ($action) {
                     200
                 );
             }else {
+                // invalid user
                 response(
                     [
                         'status' => 'error',
@@ -60,7 +61,7 @@ switch ($action) {
             !isset( $_POST['password'] ) ||
             !isset( $_POST['fullname'] )
         ) {
-            # code...
+            // bad request
             response(
                 [
                     'status' => 'error',
@@ -74,9 +75,9 @@ switch ($action) {
             $fullname = $_POST['fullname'];
 
             $user = DB::signup($email, $password, $fullname);
-            
+
             if ($user) {
-                # code...
+                // success
                 response(
                     [
                         'status' => 'success',
@@ -85,6 +86,7 @@ switch ($action) {
                     200
                 );
             }else {
+                // error
                 response(
                     [
                         'status' => 'error',

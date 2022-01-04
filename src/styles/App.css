@@ -25,3 +25,55 @@
 body {
   background-color: #141414;
 }
+
+.Login-Box {
+  background-color: #0E0E0E;
+  color: #e3e3e3;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  top: 20%;
+  position: relative;
+  border-radius: 8px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.Login-Input {
+  padding: 14px;
+  background-color: #1E1E1E;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  color: #e3e3e3;
+  width: 75%;
+  margin-bottom: 14px;
+}
+
+.Login-Form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Login-Submit {
+  cursor: pointer;
+  background-color: #4764FD;
+  width: 75%;
+  margin-bottom: 10px;
+  padding: 17px 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  outline: none;
+  border: none;
+}
+
+.my-4 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}

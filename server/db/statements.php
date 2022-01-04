@@ -78,6 +78,7 @@ class DB {
 
         $query = "INSERT INTO users (user_email, user_password, user_fullname) VALUES (:email, :password, :fullname)";
 
+        $unhashed_password = $password;
         $password = sha1( 'yisdft4783gfwjksdfh89' . $password );
         $params = [
             ':email' => $email,
@@ -88,7 +89,7 @@ class DB {
         $user = Connection::query($query, $params);
 
         if ($user) {
-            return self::login($email, $password);
+            return self::login($email, $unhashed_password);
         }
 
         return false;

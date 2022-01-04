@@ -7,7 +7,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="Header">React Trello Clone</div>
+        <div className="Header">
+          My Self Trello App
+          <p>
+            Good morning everyone! Dont’t forget to put your<br></br>daily tasks here
+          </p>
+        </div>
 
         <Board />
       </div>

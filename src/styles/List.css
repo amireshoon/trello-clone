@@ -12,8 +12,14 @@
 
 .List-Title {
   cursor: pointer;
-  padding: 10px;
+  padding: 18px;
   overflow-wrap: break-word;
+  background-color: #0E0E0E;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  color: #e3e3e3;
+  display: flex;
+  flex-direction: row;
 }
 
 .Toggle-Add-Card {
@@ -32,4 +38,12 @@
 
 .Toggle-Add-Card ion-icon {
   margin-right: 2px;
+}
+
+.List-Icons {
+  margin-left: auto;
+}
+
+.List-Title-Content {
+  width: 100%;
 }

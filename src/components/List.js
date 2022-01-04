@@ -84,8 +84,13 @@ class List extends Component {
                 deleteList={this.deleteList}
               />
             ) : (
-              <div className="List-Title" onClick={this.toggleEditingTitle}>
-                {list.title}
+              <div className="List-Title">
+                <div className="List-Title-Content" onClick={this.toggleEditingTitle}>{list.title}</div>
+                <div className="List-Icons">
+                  <div className="List-Icon" onClick={this.toggleAddingCard}>
+                    <ion-icon name="add" />
+                  </div>
+                </div>
               </div>
             )}
 

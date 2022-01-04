@@ -1,12 +1,11 @@
 import shortid from "shortid";
 
 export default function seed(store) {
-  console.log("Insert first list");
   const firstListId = shortid.generate();
 
   store.dispatch({
     type: "ADD_LIST",
-    payload: { listId: firstListId, listTitle: "First list" }
+    payload: { listId: firstListId, listTitle: "Todo" }
   });
 
   store.dispatch({
@@ -14,7 +13,7 @@ export default function seed(store) {
     payload: {
       listId: firstListId,
       cardId: shortid.generate(),
-      cardText: "First card"
+      cardText: "Buy milk"
     }
   });
 
@@ -23,16 +22,15 @@ export default function seed(store) {
     payload: {
       listId: firstListId,
       cardId: shortid.generate(),
-      cardText: "Second card"
+      cardText: "Buy eggs"
     }
   });
 
-  console.log("Insert second list");
   const secondListId = shortid.generate();
 
   store.dispatch({
     type: "ADD_LIST",
-    payload: { listId: secondListId, listTitle: "Second list" }
+    payload: { listId: secondListId, listTitle: "Doing" }
   });
 
   store.dispatch({
@@ -40,16 +38,41 @@ export default function seed(store) {
     payload: {
       listId: secondListId,
       cardId: shortid.generate(),
-      cardText: "Card 1"
+      cardText: "Creating projects"
+    }
+  });
+
+  const thirdListId = shortid.generate();
+
+  store.dispatch({
+    type: "ADD_LIST",
+    payload: { listId: thirdListId, listTitle: "Done" }
+  });
+
+  store.dispatch({
+    type: "ADD_CARD",
+    payload: {
+      listId: thirdListId,
+      cardId: shortid.generate(),
+      cardText: "Finish collage projects"
     }
   });
 
   store.dispatch({
     type: "ADD_CARD",
     payload: {
-      listId: secondListId,
+      listId: thirdListId,
       cardId: shortid.generate(),
-      cardText: "Card 2"
+      cardText: "Finish job"
+    }
+  });
+
+  store.dispatch({
+    type: "ADD_CARD",
+    payload: {
+      listId: thirdListId,
+      cardId: shortid.generate(),
+      cardText: "Finish job 2"
     }
   });
 };

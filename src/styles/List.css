@@ -1,12 +1,13 @@
 .List {
-  background: #dfe3e6;
+  background: #db380f00;
   flex-shrink: 0;
   width: 272px;
   height: fit-content;
   margin: 10px;
   margin-right: 0;
   border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  /* border: 1px solid rgba(0, 0, 0, 0.12); */
+  color: #E3E3E3;
 }
 
 .List-Title {
@@ -18,16 +19,15 @@
 .Toggle-Add-Card {
   cursor: pointer;
   padding: 10px;
-  color: #6b808c;
-  border-radius: 0 0 10px 10px;
+  color: #e3e3e3;
+  border-radius: 8px;
   display: flex;
   align-items: center;
 }
 
 .Toggle-Add-Card:hover {
-  background-color: rgba(9, 45, 66, 0.13);
-  color: #17394d;
-  text-decoration: underline;
+  background-color: #4764FD;
+  color: #e3e3e3;
 }
 
 .Toggle-Add-Card ion-icon {
